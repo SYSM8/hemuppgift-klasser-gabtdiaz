@@ -11,7 +11,7 @@ namespace BankAccount
             
             bank.Deposit(500);
             
-            bank.Withdraw(60);
+            bank.Withdraw(600);
 
             bank.DisplayBalance();
 

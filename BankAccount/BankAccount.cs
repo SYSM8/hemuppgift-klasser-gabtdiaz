@@ -28,8 +28,13 @@ namespace BankAccount
         }
         public double Withdraw(double withdrawal)
         {
-            Console.WriteLine($"Withdrew: {withdrawal}");
-            return Balance -= withdrawal;
+            if (withdrawal < Balance)
+            {
+                Console.WriteLine($"Withdrew: {withdrawal}");
+                return Balance -= withdrawal;
+            }
+            Console.WriteLine("Withdrawal exceeds balance");
+            return Balance;
         }
         public void DisplayBalance()
         {
